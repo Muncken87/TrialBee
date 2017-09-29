@@ -1,7 +1,10 @@
 <template>
   <section class="sidebar">
     <div class="sidebar-header">
-
+      <button type="button" class="close" aria-label="Close" @click="closeSidebar" v-bind:class="{ active: hide }">
+        <span></span>
+        <span></span>
+      </button>
       <p>FG342HY</p>
       <h1>Sidebar</h1>
     </div>
@@ -56,25 +59,53 @@
 <script>
 
 export default {
-  name: 'main-page'
+  name: 'main-page',
+  data() {
+    return{
+      hide: false
+    }
+  },
+  methods: {
+    closeSidebar: function() {
+      console.log("hidden");
+      this.hide = !this.hide
+    }
+  }
 }
 </script>
 <style lang="sass" scoped>
 .sidebar
   position: fixed
   top: 0
-  right: 0
+  right: -60vw
   width: 60vw
   background-color: #f4f4f4
   color: black
   height: 100vh
   border-left: 1px solid #ccc
+  transition: all 0.2s ease
+  overflow: auto
 
   .sidebar-header
     background-color: white
     border-bottom: 1px solid #ccc
     padding: 30px
-    
+
+    button
+      outline: none
+      span
+        width: 25px
+        height: 2px
+        position: relative
+        display: block
+        background-color: #000
+        &:first-of-type
+          transform: rotate(135deg)
+          top: -2px
+        &:last-of-type
+          top: -4px
+          transform: rotate(45deg)
+
     p
       color: #a7a6a6
       font-weight: bold
@@ -97,4 +128,7 @@ export default {
         max-width: 70px
         margin-bottom: 15px
         margin-top: 15px
+
+.active
+  right: 0vw
 </style>

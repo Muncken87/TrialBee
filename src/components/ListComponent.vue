@@ -1,7 +1,7 @@
 <template>
   <div class="list-jumbo">
     <app-nav></app-nav>
-    <app-sidebar></app-sidebar>
+    <app-sidebar v-bind:class="{ active: seen }"></app-sidebar>
     <div class="m-top">
       <p>Study List</p>
       <h2>Patients</h2>
@@ -123,7 +123,8 @@ export default {
           id: 7,
           countryImage: '../src/assets/icon/flag/fr.png'
         }
-      ]
+      ],
+      seen: false
     }
   },
   methods: {
@@ -132,6 +133,7 @@ export default {
     },
     selectedPatient: function(selected){
       selected.checkbox = !selected.checkbox;
+      this.seen = !this.seen;
     }
   }
 }
@@ -214,4 +216,7 @@ export default {
 
   .bold
     font-weight: bold
+
+.active
+  right: 0
 </style>
