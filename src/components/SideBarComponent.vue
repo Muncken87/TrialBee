@@ -1,7 +1,7 @@
 <template>
-  <section class="sidebar">
+  <section class="sidebar" v-bind:class="{ remove: hide }">
     <div class="sidebar-header">
-      <button type="button" class="close" aria-label="Close" @click="closeSidebar" v-bind:class="{ active: hide }">
+      <button type="button" class="close" aria-label="Close" @click="closeSidebar">
         <span></span>
         <span></span>
       </button>
@@ -67,13 +67,12 @@ export default {
   },
   methods: {
     closeSidebar: function() {
-      console.log("hidden");
-      this.hide = !this.hide
+      this.$emit('closeSidebar');
     }
   }
 }
 </script>
-<style lang="sass" scoped>
+<style lang="sass">
 .sidebar
   position: fixed
   top: 0
@@ -85,6 +84,7 @@ export default {
   border-left: 1px solid #ccc
   transition: all 0.2s ease
   overflow: auto
+
 
   .sidebar-header
     background-color: white
@@ -129,6 +129,6 @@ export default {
         margin-bottom: 15px
         margin-top: 15px
 
-.active
-  right: 0vw
+.remove
+  right: -60vw !important
 </style>

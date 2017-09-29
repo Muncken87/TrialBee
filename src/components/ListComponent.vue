@@ -1,14 +1,14 @@
 <template>
   <div class="list-jumbo">
     <app-nav></app-nav>
-    <app-sidebar v-bind:class="{ active: seen }"></app-sidebar>
+    <app-sidebar v-bind:class="{ active: seen }" v-on:closeSidebar="closeSideBar"></app-sidebar>
     <div class="m-top">
       <p>Study List</p>
       <h2>Patients</h2>
     </div>
     <div class="container">
       <div class="table-container">
-        <table class="table table-hover">
+        <table class="table">
           <thead>
             <tr>
               <th class="checkbox-box">
@@ -23,9 +23,9 @@
             </tr>
           </thead>
           <tbody>
-          <tr v-for="patient in patients" @click="selectedPatient(patient)">
+          <tr v-for="patient in patients" @click="selectedPatient(patient)" v-bind:class="{ selectedPatient: patient.highlighted }">
             <td class="checkbox-box">
-              <input type="checkbox" value="0" v-bind:id="patient.id" v-bind:checked='patient.checkbox'>
+              <input type="checkbox" value="0" v-bind:id="patient.id" checked=''>
               <label v-bind:for="patient.id"></label>
             </td>
             <td class="bold">{{patient.name}}</td>
@@ -54,7 +54,7 @@ export default {
     return{
       patients: [
         {
-          checkbox: true,
+          highlighted: false,
           name: 'Something important',
           email: 'something@test.se',
           country: 'France',
@@ -64,7 +64,7 @@ export default {
           countryImage: '../src/assets/icon/flag/fr.png'
         },
         {
-          checkbox: true,
+          highlighted: false,
           name: 'Le Bull Hopital de soleil',
           email: 'something@test.se',
           country: 'France',
@@ -74,7 +74,7 @@ export default {
           countryImage: '../src/assets/icon/flag/fr.png'
         },
         {
-          checkbox: true,
+          highlighted: false,
           name: 'Lestats hopital de la cheese',
           email: 'someemail@test.se',
           country: 'France',
@@ -84,7 +84,7 @@ export default {
           countryImage: '../src/assets/icon/flag/fr.png'
         },
         {
-          checkbox: true,
+          highlighted: false,
           name: 'London Hospital',
           email: 'sherlock@test.se',
           country: 'Great britain',
@@ -94,7 +94,7 @@ export default {
           countryImage: '../src/assets/icon/flag/gb.png'
         },
         {
-          checkbox: true,
+          highlighted: false,
           name: 'London Hospital',
           email: 'sherlock@test.se',
           country: 'Great britain',
@@ -104,7 +104,7 @@ export default {
           countryImage: '../src/assets/icon/flag/gb.png'
         },
         {
-          checkbox: true,
+          highlighted: false,
           name: 'Hopital Berlin',
           email: 'sherlock@test.se',
           country: 'Germany',
@@ -114,7 +114,7 @@ export default {
           countryImage: '../src/assets/icon/flag/ge.png'
         },
         {
-          checkbox: true,
+          highlighted: false,
           name: 'Hospital de la Rue',
           email: 'sherlock@test.se',
           country: 'France',
@@ -132,13 +132,19 @@ export default {
       console.log("Pressed");
     },
     selectedPatient: function(selected){
-      selected.checkbox = !selected.checkbox;
       this.seen = !this.seen;
+      selected.highlighted = !selected.highlighted;
+    },
+    closeSideBar: function(){
+      console.log("Parent closed sidebar toggled");
+      this.seen = false;
+
+
     }
   }
 }
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
 .list-jumbo
   background-color: #002b93
   height: 300px
@@ -219,4 +225,7 @@ export default {
 
 .active
   right: 0
+
+.selectedPatient
+  background-color: #eee
 </style>

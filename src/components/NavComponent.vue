@@ -17,19 +17,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <router-link to="/main">Dolor</router-link>
+          <router-link to="/">Dolor</router-link>
         </li>
         <li>
-          <router-link to="/main">Ipsum</router-link>
+          <router-link to="/">Ipsum</router-link>
         </li>
         <li>
-          <router-link to="/main">Lorem</router-link>
+          <router-link to="/">Lorem</router-link>
         </li>
         <li>
           <router-link to="/list">List</router-link>
         </li>
         <li>
-          <router-link to="/main">Login</router-link>
+          <router-link to="/">Login</router-link>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
