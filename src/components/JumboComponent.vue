@@ -41,7 +41,7 @@ export default {
 		background-image: url('../assets/Bgpart1@3x.png')
 
 
-	.nav-content 
+	.nav-content
 		padding-top: 5em
 		@media (max-width: 450px)
 			padding-top: 0em
@@ -60,7 +60,7 @@ export default {
 		color: black
 		border: 1px solid white
 		margin-right: 15px
-		transition: all 0.2s ease 
+		transition: all 0.2s ease
 		margin-top: 15px
 
 

@@ -16,11 +16,21 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#1">Dolor<span class="sr-only">(current)</span></a></li>
-        <li><a href="#2">Ipsum</a></li>
-        <li><a href="#3">Lorem</a></li>
-        <li><a href="#4">List</a></li>
-        <li><a href="#5">Login</a></li>
+        <li>
+          <router-link to="/main">Dolor</router-link>
+        </li>
+        <li>
+          <router-link to="/main">Ipsum</router-link>
+        </li>
+        <li>
+          <router-link to="/main">Lorem</router-link>
+        </li>
+        <li>
+          <router-link to="/list">List</router-link>
+        </li>
+        <li>
+          <router-link to="/main">Login</router-link>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -1,22 +1,12 @@
 <template>
   <div id="app">
-    <app-jumbo></app-jumbo>
-    <app-section-1></app-section-1>
-    <app-section-2></app-section-2>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import JumboComponent from '../src/components/JumboComponent.vue'
-import Section1Component from '../src/components/Section1Component.vue'
-import Section2Component from '../src/components/Section2Component.vue'
 export default {
-  name: 'app',
-  components: {
-    appJumbo: JumboComponent,
-    appSection1: Section1Component,
-    appSection2: Section2Component
-  }
+  name: 'app'
 }
 </script>
 <style lang="sass">

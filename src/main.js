@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import MainPageComponent from '../src/components/MainPageComponent.vue'
+import ListComponent from '../src/components/ListComponent.vue'
 
 
 Vue.use(VueRouter)
@@ -8,23 +10,13 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
   {
-    path: '/auth',
-
-  },
-  {
-    path: '/success',
-
-  },
-  {
     path: '/',
+    component: MainPageComponent
 
   },
   {
-    path: '/about',
-
-  },
-  {
-    path: '/posts',
+    path: '/list',
+    component: ListComponent
 
   }
   // {
