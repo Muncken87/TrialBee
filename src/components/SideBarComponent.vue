@@ -76,15 +76,15 @@ export default {
 .sidebar
   position: fixed
   top: 0
-  right: -60vw
-  width: 60vw
+  right: -50vw
+  width: 50vw
   background-color: #f4f4f4
   color: black
   height: 100vh
   border-left: 1px solid #ccc
   transition: all 0.2s ease
   overflow: auto
-
+  transition: all 0.3s ease
 
   .sidebar-header
     background-color: white
@@ -115,6 +115,10 @@ export default {
   .detail-list
     padding: 30px
 
+    @media (max-width: 450px)
+      padding: 5px
+  
+
     .card
       border: 1px solid #ccc
       background-color: white
@@ -130,5 +134,5 @@ export default {
         margin-top: 15px
 
 .remove
-  right: -60vw !important
+  right: -50vw !important
 </style>

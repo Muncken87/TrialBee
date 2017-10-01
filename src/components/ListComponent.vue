@@ -8,11 +8,11 @@
     </div>
     <div class="container">
       <div class="table-container">
-        <table class="table">
+        <table class="table table-responsive">
           <thead>
             <tr>
               <th class="checkbox-box">
-                <input type="checkbox" value="1" id="checkbox" @click="runTest">
+                <input type="checkbox" value="1" id="checkbox">
                 <label for="checkbox"></label>
               </th>
               <th>Site</th>
@@ -23,7 +23,7 @@
             </tr>
           </thead>
           <tbody>
-          <tr v-for="patient in patients" @click="selectedPatient(patient)" v-bind:class="{ selectedPatient: patient.highlighted }">
+          <tr v-for="patient in patients" @click="selectedPatient(patient)" v-bind:class="{selectedPatient: patient.highlighted}">
             <td class="checkbox-box">
               <input type="checkbox" value="0" v-bind:id="patient.id" checked=''>
               <label v-bind:for="patient.id"></label>
@@ -128,9 +128,6 @@ export default {
     }
   },
   methods: {
-    runTest: function() {
-      console.log("Pressed");
-    },
     selectedPatient: function(selected){
       this.seen = !this.seen;
       selected.highlighted = !selected.highlighted;
@@ -138,8 +135,6 @@ export default {
     closeSideBar: function(){
       console.log("Parent closed sidebar toggled");
       this.seen = false;
-
-
     }
   }
 }
@@ -172,6 +167,7 @@ export default {
       padding: 20px
 
     .table
+      margin-bottom: 0
       tbody
         tr
           &:hover
