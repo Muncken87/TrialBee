@@ -7,6 +7,7 @@
       <h2>Patients</h2>
     </div>
     <div class="container">
+      <div v-bind:class="{opacity: seen}"></div>
       <div class="table-container">
         <table class="table table-responsive">
           <thead>
@@ -23,19 +24,19 @@
             </tr>
           </thead>
           <tbody>
-          <tr v-for="patient in patients" @click="selectedPatient(patient)" v-bind:class="{selectedPatient: patient.highlighted}">
-            <td class="checkbox-box">
-              <input type="checkbox" value="0" v-bind:id="patient.id" checked=''>
-              <label v-bind:for="patient.id"></label>
-            </td>
-            <td class="bold">{{patient.name}}</td>
-            <td>{{patient.email}}</td>
-            <td><img v-bind:src="patient.countryImage">{{patient.country}}</td>
-            <td>{{patient.city}}</td>
-            <td>{{patient.status}}</td>
-          </tr>
+            <tr v-for="patient in patients" @click="selectedPatient(patient)" v-bind:class="{selectedPatient: patient.highlighted}">
+              <td class="checkbox-box">
+                <input type="checkbox" value="0" v-bind:id="patient.id" checked=''>
+                <label v-bind:for="patient.id"></label>
+              </td>
+              <td class="bold">{{patient.name}}</td>
+              <td>{{patient.email}}</td>
+              <td><img v-bind:src="patient.countryImage">{{patient.country}}</td>
+              <td>{{patient.city}}</td>
+              <td>{{patient.status}}</td>
+            </tr>
           </tbody>
-        </table>
+        </table> <!-- end table -->
       </div> <!-- end table-container-->
   </div> <!-- end container -->
 </div>
@@ -159,25 +160,27 @@ export default {
     border: 1px solid #ccc
     background-color: #fff
     color: black
-
-    .table>thead>tr>th
-      border-bottom: 1px solid #ccc
-
-    .table>thead>tr>th
-      padding: 20px
+    margin-bottom: 20px
 
     .table
       margin-bottom: 0
+
+      thead
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.15)
+        tr
+          th
+            padding: 20px
+            border-bottom: 1px solid #ccc
+
       tbody
         tr
           &:hover
             cursor: pointer
+          td
+            padding: 20px
 
-    thead
-      box-shadow: 0px 2px 2px rgba(0,0,0,0.15)
-
-    img
-      margin-right: 10px
+        img
+          margin-right: 10px
 
     .checkbox-box
       width: 25px
@@ -213,9 +216,6 @@ export default {
         &:checked + label:after
           opacity: 0
 
-    .table>tbody>tr>td
-      padding: 20px
-
   .bold
     font-weight: bold
 
@@ -224,4 +224,17 @@ export default {
 
 .selectedPatient
   background-color: #eee
+
+.opacity
+  background-color: rgba(0,0,0,0.7)
+  z-index: 1
+  width: 100%
+  height: calc(100vh + 173px + 232px)
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  overflow: hidden
+  transition: all 0.2s ease
+
 </style>

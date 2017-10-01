@@ -19,6 +19,12 @@ export default {
 body
   color: white
   font-family: Raleway
+  position: relative
+  height: 100%
+html
+  height: 100%
+  position: relative
+
 
 .t-center
   text-align: center
@@ -26,5 +32,4 @@ body
 img
   height: auto
   max-width: 100%
-
 </style>

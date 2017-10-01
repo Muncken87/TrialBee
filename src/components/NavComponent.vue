@@ -9,9 +9,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <router-link to="/" class="navbar-brand">
         <img src="../assets/Logo/horizontal2-nosubtext.png"/>
-      </a>
+      </router-link>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,7 +20,7 @@
           <router-link to="/">Dolor</router-link>
         </li>
         <li>
-          <router-link to="/">Ipsum</router-link>
+          <router-link to="/carousel">Ipsum</router-link>
         </li>
         <li>
           <router-link to="/">Lorem</router-link>

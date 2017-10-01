@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import MainPageComponent from '../src/components/MainPageComponent.vue'
 import ListComponent from '../src/components/ListComponent.vue'
+import CarouselComponent from '../src/components/CarouselComponent.vue'
 
 
 Vue.use(VueRouter)
@@ -17,6 +18,11 @@ const router = new VueRouter({
   {
     path: '/list',
     component: ListComponent
+
+  },
+  {
+    path: '/carousel',
+    component: CarouselComponent
 
   }
   // {

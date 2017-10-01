@@ -7,6 +7,11 @@
       </button>
       <p>FG342HY</p>
       <h1>Sidebar</h1>
+      <div class="progress-block">
+        <div class="progress-bar-shadow">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
     </div>
     <div class="row">
       <section class="detail-list">
@@ -33,6 +38,7 @@
 
         <div class="col-md-4">
           <div class="card">
+            <img src="src/assets/icon/mid/redalert.png" class="important-notice"/>
             <img src="src/assets/icon/xxlarge/statistics@3x.png"/>
             <p>Activity</p>
           </div>
@@ -84,27 +90,30 @@ export default {
   border-left: 1px solid #ccc
   transition: all 0.2s ease
   overflow: auto
-  transition: all 0.3s ease
+  z-index: 2
 
   .sidebar-header
     background-color: white
     border-bottom: 1px solid #ccc
     padding: 30px
 
-    button
-      outline: none
-      span
-        width: 25px
-        height: 2px
+    .progress-block
+      display: block
+      width: 100%
+      .progress-bar-shadow
         position: relative
-        display: block
-        background-color: #000
-        &:first-of-type
-          transform: rotate(135deg)
-          top: -2px
-        &:last-of-type
-          top: -4px
-          transform: rotate(45deg)
+        background-color: rgba(0,0,0,0.1)
+        height: 17px
+        border-radius: 8px
+
+        .progress-bar-fill
+          position: absolute
+          top: 3px
+          left: 4px
+          width: 50%
+          background-color: #002b93
+          height: 11px
+          border-radius: 8px
 
     p
       color: #a7a6a6
@@ -112,12 +121,30 @@ export default {
     h1
       margin-top: 0
 
+    button
+      outline: none
+      position: relative
+      display: block
+      width: 25px
+      height: 25px
+      span
+        position: absolute
+        width: 25px
+        height: 2px
+        display: block
+        background-color: #000
+        left: 0
+        top: 11px
+        &:first-of-type
+          transform: rotate(135deg)
+        &:last-of-type
+          transform: rotate(45deg)
+
   .detail-list
-    padding: 30px
+    padding: 20px
 
     @media (max-width: 450px)
       padding: 5px
-  
 
     .card
       border: 1px solid #ccc
@@ -126,12 +153,21 @@ export default {
       padding: 15px 0px
       margin-bottom: 30px
       box-shadow: 0px 8px 8px rgba(0,0,0,0.10)
+      position: relative
 
       img
         height: 70px
         max-width: 70px
         margin-bottom: 15px
         margin-top: 15px
+
+      .important-notice
+        position: absolute
+        right: -25px
+        top: -15px
+        max-width: 50px
+        height: auto
+        margin: 0
 
 .remove
   right: -50vw !important
