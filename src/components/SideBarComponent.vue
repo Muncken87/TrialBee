@@ -20,43 +20,43 @@
       <section class="detail-list">
         <div class="col-md-4">
           <div class="card">
-            <img src="src/assets/icon/xxlarge/participant-details@3x.png"/>
+            <img src="/src/assets/icon/xxlarge/participant-details@3x.png"/>
             <p>Participant details</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="card">
-            <img src="src/assets/icon/xxlarge/settings@3x.png"/>
+            <img src="/src/assets/icon/xxlarge/settings@3x.png"/>
             <p>Configuration</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="card">
-            <img src="src/assets/icon/xxlarge/importantevents@3x.png"/>
+            <img src="/src/assets/icon/xxlarge/importantevents@3x.png"/>
             <p>Appointments</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="card">
-            <img src="src/assets/icon/mid/redalert.png" class="important-notice"/>
-            <img src="src/assets/icon/xxlarge/statistics@3x.png"/>
+            <img src="/src/assets/icon/mid/redalert.png" class="important-notice"/>
+            <img src="/src/assets/icon/xxlarge/statistics@3x.png"/>
             <p>Activity</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="card">
-            <img src="src/assets/icon/xxlarge/notification@3x.png"/>
+            <img src="/src/assets/icon/xxlarge/notification@3x.png"/>
             <p>Notifications</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="card">
-            <img src="src/assets/icon/xxlarge/timeline@3x.png"/>
+            <img src="/src/assets/icon/xxlarge/timeline@3x.png"/>
             <p>Timeline</p>
           </div>
         </div>
@@ -183,7 +183,4 @@ export default {
 
 .remove
   right: -70vw !important
-
-.overflow
-  overflow: hidden
 </style>

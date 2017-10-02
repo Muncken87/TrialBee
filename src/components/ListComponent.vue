@@ -62,7 +62,7 @@ export default {
           city: 'Paris',
           status: true,
           id: 1,
-          countryImage: '../src/assets/icon/flag/fr.png'
+          countryImage: '/src/assets/icon/flag/fr.png'
         },
         {
           highlighted: false,
@@ -72,7 +72,7 @@ export default {
           city: 'Paris',
           status: true,
           id: 2,
-          countryImage: '../src/assets/icon/flag/fr.png'
+          countryImage: '/src/assets/icon/flag/fr.png'
         },
         {
           highlighted: false,
@@ -82,7 +82,7 @@ export default {
           city: 'Paris',
           status: true,
           id: 3,
-          countryImage: '../src/assets/icon/flag/fr.png'
+          countryImage: '/src/assets/icon/flag/fr.png'
         },
         {
           highlighted: false,
@@ -92,7 +92,7 @@ export default {
           city: 'London',
           status: true,
           id: 4,
-          countryImage: '../src/assets/icon/flag/gb.png'
+          countryImage: '/src/assets/icon/flag/gb.png'
         },
         {
           highlighted: false,
@@ -102,7 +102,7 @@ export default {
           city: 'London',
           status: true,
           id: 5,
-          countryImage: '../src/assets/icon/flag/gb.png'
+          countryImage: '/src/assets/icon/flag/gb.png'
         },
         {
           highlighted: false,
@@ -112,7 +112,7 @@ export default {
           city: 'Berlin',
           status: true,
           id: 6,
-          countryImage: '../src/assets/icon/flag/ge.png'
+          countryImage: '/src/assets/icon/flag/ge.png'
         },
         {
           highlighted: false,
@@ -122,7 +122,7 @@ export default {
           city: 'Paris',
           status: true,
           id: 7,
-          countryImage: '../src/assets/icon/flag/fr.png'
+          countryImage: '/src/assets/icon/flag/fr.png'
         }
       ],
       seen: false,

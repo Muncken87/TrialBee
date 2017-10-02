@@ -51,28 +51,28 @@ export default {
       carousel_items: [
         {
          active: true,
-         bg: './src/assets/Carousel-Bgplate.png',
-         side_img: 'src/assets/Carousel-image1.png',
+         bg: '/src/assets/Carousel-Bgplate.png',
+         side_img: '/src/assets/Carousel-image1.png',
          header: 'Process',
          title: 'Step 1: Lorem Ipsum',
          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat erat malesuada lacus blandit tempor. Duis at nibh finibus, hendrerit diam ut, pharetra est. In tincidunt eleifend nisi, non cursus enim laoreet pretium. Vestibulum congue maximus dignissim. Etiam vulputate tempor orci at ullamcorper. Phasellus enim neque, congue ut enim nec, faucibus rutrum diam. Mauris nec magna nec turpis porttitor pulvinar. Donec consequat orci id sodales placerat.',
-         icon: 'src/assets/Step1-icon.png'
+         icon: '/src/assets/Step1-icon.png'
         },
          {
-         bg: 'src/assets/Carousel-Bgplate.png',
-         side_img: 'src/assets/Carousel-image2.png',
+         bg: '/src/assets/Carousel-Bgplate.png',
+         side_img: '/src/assets/Carousel-image2.png',
          header: 'Process',
          title: 'Step 1: Lorem Ipsum',
          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat erat malesuada lacus blandit tempor. Duis at nibh finibus, hendrerit diam ut, pharetra est. In tincidunt eleifend nisi, non cursus enim laoreet pretium. Vestibulum congue maximus dignissim. Etiam vulputate tempor orci at ullamcorper. Phasellus enim neque, congue ut enim nec, faucibus rutrum diam. Mauris nec magna nec turpis porttitor pulvinar. Donec consequat orci id sodales placerat.',
-         icon: 'src/assets/Step2-icon.png'
+         icon: '/src/assets/Step2-icon.png'
         },
          {
-         bg: 'src/assets/Carousel-Bgplate.png',
-         side_img: 'src/assets/Carousel-image3.png',
+         bg: '/src/assets/Carousel-Bgplate.png',
+         side_img: '/src/assets/Carousel-image3.png',
          header: 'Process',
          title: 'Step 1: Lorem Ipsum',
          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat erat malesuada lacus blandit tempor. Duis at nibh finibus, hendrerit diam ut, pharetra est. In tincidunt eleifend nisi, non cursus enim laoreet pretium. Vestibulum congue maximus dignissim. Etiam vulputate tempor orci at ullamcorper. Phasellus enim neque, congue ut enim nec, faucibus rutrum diam. Mauris nec magna nec turpis porttitor pulvinar. Donec consequat orci id sodales placerat.',
-         icon: 'src/assets/Step3-icon.png'
+         icon: '/src/assets/Step3-icon.png'
         }
       ]
     }
