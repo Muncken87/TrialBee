@@ -1,4 +1,5 @@
 <template>
+ <!-- second section for the studies -->
   <section class="section-2">
     <div class="container t-center z">
       <div class="studies-title">
@@ -66,54 +67,48 @@ export default {
   width: 100%
   padding: 10em 0
 
-  .studies-title
-    margin-top: 7em
-    h2
-      font-weight: bold
-      margin-top: 0
+  .container
 
+  .z
+    z-index: 2
 
-  .studies-posts
-    margin-top: 5em
-    position: relative
-
-    .card
-      background-color: white
-      padding: 20px
-      text-align: left
-      box-shadow: 0px 0px 7px rgba(0,0,0,0.20)
-
-      h3,h2,p
-        color: black
-
-      h3
-        color: #747474
-        font-size: 14px
-        text-transform: uppercase
-        font-weight: 300
-        margin-bottom: 5px
-
+    .studies-title
+      margin-top: 7em
       h2
         font-weight: bold
-        font-size: 24px
         margin-top: 0
 
-      p
-        font-weight: 400
 
-    .col-md-4
-      margin-bottom: 30px
-      border-radius: 4px
+    .studies-posts
+      margin-top: 5em
+      position: relative
 
-.z
-  z-index: 2
+      .card
+        background-color: white
+        padding: 20px
+        text-align: left
+        box-shadow: 0px 0px 7px rgba(0,0,0,0.20)
 
-img
-  width: 100%
+        h3,h2,p
+          color: black
 
-  // @media (min-device-pixel-ratio: 2)
-  //   background-image: url('../assets/Bgpart1@2x.png')
-  // @media (min-device-pixel-ratio: 3)
-  //   background-image: url('../assets/Bgpart1@3x.png')
+        h3
+          color: #747474
+          font-size: 14px
+          text-transform: uppercase
+          font-weight: 300
+          margin-bottom: 5px
+
+        h2
+          font-weight: bold
+          font-size: 24px
+          margin-top: 0
+
+        p
+          font-weight: 400
+
+      .col-md-4
+        margin-bottom: 30px
+        border-radius: 4px
 
 </style>

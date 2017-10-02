@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 3 components imported for the main page -->
     <app-jumbo></app-jumbo>
     <app-section-1></app-section-1>
     <app-section-2></app-section-2>

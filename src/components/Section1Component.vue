@@ -1,4 +1,5 @@
 <template>
+  <!-- first section underneath the jumbo on first page -->
   <section class="section-1">
     <div class="container">
       <div class="row">
@@ -9,9 +10,9 @@
          <div class="col-md-7 col-sm-7 phone-img t-center m-height">
           <img src="../assets/Mobile.png"/>
         </div>
-      </div>
-    </div>
-  </section>
+      </div> <!-- end row -->
+    </div> <!-- end container -->
+  </section> <!-- end section -->
 </template>
 
 <script>

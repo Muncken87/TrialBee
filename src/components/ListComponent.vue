@@ -125,14 +125,17 @@ export default {
           countryImage: '../src/assets/icon/flag/fr.png'
         }
       ],
-      seen: false
+      seen: false,
+      overflow: false
     }
   },
   methods: {
+    // On click, chooses selected patient , highlights it and opens the sidebar toggling between seen and not seen 
     selectedPatient: function(selected){
       this.seen = !this.seen;
       selected.highlighted = !selected.highlighted;
     },
+    // Passed value from sidebarcomponent, once the x has been clicked in the sidebar, this.seen in this function will set the black opacity background to false
     closeSideBar: function(){
       console.log("Parent closed sidebar toggled");
       this.seen = false;
@@ -158,66 +161,70 @@ export default {
   .table-container
     margin-top: 4em
     border: 1px solid #ccc
-    background-color: #fff
     color: black
     margin-bottom: 20px
 
-    .table
-      margin-bottom: 0
+  .table-responsive
+    @media (max-width: 768px)
+      border: none
 
-      thead
-        box-shadow: 0px 2px 2px rgba(0,0,0,0.15)
-        tr
-          th
-            padding: 20px
-            border-bottom: 1px solid #ccc
+  .table
+    margin-bottom: 0
+    background-color: #fff
 
-      tbody
-        tr
-          &:hover
-            cursor: pointer
-          td
-            padding: 20px
+    thead
+      box-shadow: 0px 2px 2px rgba(0,0,0,0.15)
+      tr
+        th
+          padding: 20px
+          border-bottom: 1px solid #ccc
 
-        img
-          margin-right: 10px
+    tbody
+      tr
+        &:hover
+          cursor: pointer
+        td
+          padding: 20px
 
-    .checkbox-box
+      img
+        margin-right: 10px
+
+  .checkbox-box
+    width: 25px
+    position: relative
+
+    label
+      cursor: pointer
+      position: absolute
       width: 25px
-      position: relative
-
-      label
-        cursor: pointer
+      height: 25px
+      top: 18px
+      left: 16px
+      background: #fff
+      border: 1px solid #ccc
+      border-radius: 2px
+      &:after
+        opacity: 1
+        content: ''
         position: absolute
-        width: 25px
-        height: 25px
-        top: 18px
-        left: 16px
-        background: #fff
-        border: 1px solid #ccc
-        border-radius: 2px
-        &:after
-          opacity: 1
-          content: ''
-          position: absolute
-          width: 20px
-          height: 10px
-          background: transparent
-          top: 3px
-          left: 3px
-          border: 3px solid #002F8D
-          border-top: none
-          border-right: none
-          transform: rotate(-45deg)
+        width: 20px
+        height: 10px
+        background: transparent
+        top: 3px
+        left: 3px
+        border: 3px solid #002F8D
+        border-top: none
+        border-right: none
+        transform: rotate(-45deg)
 
 
-      input[type=checkbox]
-        visibility: hidden
-        &:checked + label:after
-          opacity: 0
+    input[type=checkbox]
+      visibility: hidden
+      &:checked + label:after
+        opacity: 0
 
-  .bold
-    font-weight: bold
+.bold
+  font-weight: bold
 
 .active
   right: 0

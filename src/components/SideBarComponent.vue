@@ -1,5 +1,7 @@
 <template>
-  <section class="sidebar" v-bind:class="{ remove: hide }">
+  <!-- Sidebar for the list section -->
+  <section class="sidebar" v-bind:class="{ remove: hide, overflow: hide }">
+
     <div class="sidebar-header">
       <button type="button" class="close" aria-label="Close" @click="closeSidebar">
         <span></span>
@@ -13,6 +15,7 @@
         </div>
       </div>
     </div>
+
     <div class="row">
       <section class="detail-list">
         <div class="col-md-4">
@@ -57,9 +60,10 @@
             <p>Timeline</p>
           </div>
         </div>
-    </section>
-    </div>
-  </section>
+
+      </section> <!-- end detail list -->
+    </div> <!-- end row -->
+  </section> <!-- end sidebar section -->
 </template>
 
 <script>
@@ -68,10 +72,12 @@ export default {
   name: 'main-page',
   data() {
     return{
+      // Boolean value for the sidebar to open or close 
       hide: false
     }
   },
   methods: {
+    // Emit the closesidebar function and pass it on to the ListComponent
     closeSidebar: function() {
       this.$emit('closeSidebar');
     }
@@ -89,22 +95,25 @@ export default {
   height: 100vh
   border-left: 1px solid #ccc
   transition: all 0.2s ease
-  overflow: auto
+  overflow-x: hidden
   z-index: 2
 
   .sidebar-header
     background-color: white
     border-bottom: 1px solid #ccc
-    padding: 30px
+    padding: 15px
 
     .progress-block
       display: block
       width: 100%
+      max-width: 100%
       .progress-bar-shadow
         position: relative
         background-color: rgba(0,0,0,0.1)
         height: 17px
         border-radius: 8px
+        max-width: 100%
+        width: 98%
 
         .progress-bar-fill
           position: absolute
@@ -127,6 +136,7 @@ export default {
       display: block
       width: 25px
       height: 25px
+      margin-right: 15px
       span
         position: absolute
         width: 25px
@@ -141,8 +151,7 @@ export default {
           transform: rotate(45deg)
 
   .detail-list
-    padding: 20px
-
+    padding: 15px
     @media (max-width: 450px)
       padding: 5px
 
@@ -168,7 +177,13 @@ export default {
         max-width: 50px
         height: auto
         margin: 0
+        @media (max-width: 450px)
+          right: -4px
+          top: 4px
 
 .remove
-  right: -50vw !important
+  right: -70vw !important
+
+.overflow
+  overflow: hidden
 </style>
